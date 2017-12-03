@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 8s;
+  animation-name: animatebottom;
+  animation-duration: 4s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom" contenteditable>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Student</th>
+        <th scope="col">Stream</th>
+        <th scope="col">Room</th>
+        <th scope="col">Supervisor</th>
+        <th scope="col">Second Examiner</th>
+          </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">09:00 AM</th>
+        <td>John Smith</td>
+        <td>Multimedia</td>
+        <td>101</td>
+        <td>Rose bush</td>
+        <td>John Miller</td>
+      </tr>
+      <tr>
+        <th scope="row">09:30 AM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00 AM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">10:30 AM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00 AM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">11:30 AM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">12:00 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">12:30 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">02:00 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">02:30 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">03:00 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">03:30 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">04:00 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">04:30 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">05:00 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+      <tr>
+        <th scope="row">05:30 PM</th>
+        <td>Student X</td>
+        <td>Stream X</td>
+        <td>101</td>
+        <td>Supervisor X</td>
+        <td>Examiner X</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Student</th>
+        <th scope="col">Stream</th>
+        <th scope="col">Room</th>
+        <th scope="col">Supervisor</th>
+        <th scope="col">Second Examiner</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">09:00 AM</th>
+        <td>John Doe</td>
+        <td>Cloud Computing</td>
+        <td>102</td>
+        <td>Rebecca Bush </td>
+        <td>Millar John </td>
+      </tr>
+      <tr>
+        <th scope="row">09:30 AM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">09:30 AM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">10:30 AM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00 AM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">11:30 AM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">12:00 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">12:30 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">02:00 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">02:30 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">03:00 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">03:30 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">04:00 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">04:30 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">05:00 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+      <tr>
+        <th scope="row">05:30 PM</th>
+        <td>Student Y</td>
+        <td>Stream Y</td>
+        <td>102</td>
+        <td>Supervisor Y</td>
+        <td>Examiner Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Student</th>
+        <th scope="col">Stream</th>
+        <th scope="col">Room</th>
+        <th scope="col">Supervisor</th>
+        <th scope="col">Second Examiner</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">09:00 AM</th>
+        <td>doe John</td>
+        <td>Cyber Security</td>
+        <td>103</td>
+        <td>Jim King</td>
+        <td>Robert Hsing</td>
+      </tr>
+      <tr>
+        <th scope="row">09:30 AM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">10:00 AM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">10:30 AM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">11:00 AM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">11:30 AM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">12:00 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">12:30 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">02:00 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">02:30 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">03:00 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">03:30 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">04:00 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">04:30 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">05:00 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+      <tr>
+        <th scope="row">05:30 PM</th>
+        <td>Student Z</td>
+        <td>Stream Z</td>
+        <td>103</td>
+        <td>Supervisor Z</td>
+        <td>Examiner Z</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class ="col-lg-12" contenteditable="false">
+  <a href="newschedule.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Save Schedule</a>
+  <a href="newschedule.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Export Schedule</a>
+    <a href="newschedule.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit Schedule Input</a>
+  </div>
+</div>
+
+
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
