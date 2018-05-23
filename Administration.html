@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap 4 Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+ 
+      <!-- A grey horizontal navbar that becomes vertical on small screens -->
+      <nav class="navbar navbar-expand-sm bg-dark">
+         <!-- Links -->
+         <ul class="navbar-nav" color = ">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Xchedule</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Documentation</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Online Tutorial</a>
+            </li>
+         </ul>
+      </nav>
+	  
+	  
+	        <p class="text-center">This Section is for administration purposes.  In this Section please provide the information to be used in the creation of the schedule for the different types of schedule that are required.</p>
+     <span class="border border-danger">
+         <form>
+            <div class="form-group">
+               <label for="SupervisorExcelForm">Upload Supervisor Listings</label>
+               <input type="file" class="form-control-file" id="SupervisorExcelForm">
+               <label for="SubjectsExcelForm">upload subjects</label>
+               <input type="file" class="form-control-file" id="SubjectsExcelForm">
+               <label for="ClassroomExcelForm">Upload Classrooms</label>
+               <input type="file" class="form-control-file" id="ClassroomExcelForm">
+               <label for="StudentsExcelForm">Upload Students Enrolled</label>
+               <input type="file" class="form-control-file" id="StudentsExcelForm">
+            </div>
+         </form>
+		 </span>
+		 
+		 
+ 
+	  
+	  
+	  
+	  
+	  
+      <script>
+         $(function(){
+         $('[data-toggle="tooltip"]').tooltip();
+         });
+      </script> 
+   </body>
+</html>

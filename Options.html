@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Options</title>
+ <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   </head>
+   <body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Xchedule</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/Project/Options.html">Create a schedule</a></li>
+      <li><a href="/Project/Dashboard.php">Dashboard</a></li>
+	  <li><a href="/Project/Admin.php">Administration</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/Project/Jumbo.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+	  
+<div class ="container">
+
+<div class="container text-center">    
+  <h3>Choose schedule type </h3><br>
+  <div class="row">
+<div class="panel panel-primary col-md-6">
+      <div class="panel-heading"> <h3> Midpoint Schedule</h3> </div>
+      <div class="panel-body">
+	  
+	  
+	  
+	  <img src="Midpoint.png" class="img-thumbnail" alt="Midpoint" width="304" height="236"> 
+	  
+	   <h4> The Midpoint schedule option will generate a schedule based upon the supervisors availability such as teaching hours, holidays, sick leave and the presentation times provided. </h4>
+	
+	        <form class="form-horizontal" action="ViewMidpointSchedule.php" method="post" name="upload_excel" enctype="multipart/form-data">
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg" name="ViewMidpointSchedule" style =margin-bottom:10%>Create A Mid Point Presentation Schedule</button>
+            </div>
+         </form>
+	  </div>
+    </div>
+	
+	
+	
+   <div class="panel panel-primary col-md-6">
+      <div class="panel-heading"> <h3> End of year schedule</h3> </div>
+      <div class="panel-body">
+	  
+	   <img src="Final.png" class="img-thumbnail" alt="Final" width="304" height="236"> 
+	   <h4> The End of year schedule option will generate a schedule based upon the presentation times and rooms provided. Supervisor availability is not taken into account. </h4> 
+	   <form class="form-horizontal" action="ViewSchedule.php" method="post" name="upload_excel" enctype="multipart/form-data">
+            <div class="form-group">
+               <button type="submit" class="btn btn-primary btn-lg" name="ViewSchedule" style =margin-bottom:10%>Create End of year Presentation Schedule</button>
+            </div>
+         </form>
+
+	  
+	  
+	  </div>
+    </div>
+
+	
+	
+	
+</div>	  
+
+   </body>
+</html>
